@@ -64,3 +64,19 @@ FoodServiceOccupancyForecast/
 ├── FoodServiceOccupancyForecast.sln         # Файл решения
 ├── .gitignore                               # Исключения Git
 └── README.md                                # Описание проекта
+```
+### 🔗 Зависимости между проектами
+```
+1. FoodServiceOccupancyForecast.Web → зависит от:
+   ├── FoodServiceOccupancyForecast.Core
+   ├── FoodServiceOccupancyForecast.Infrastructure
+   └── FoodServiceOccupancyForecast.VideoAnalysis
+
+2. FoodServiceOccupancyForecast.Infrastructure → зависит от:
+   └── FoodServiceOccupancyForecast.Core
+
+3. FoodServiceOccupancyForecast.VideoAnalysis → зависит от:
+   └── FoodServiceOccupancyForecast.Core
+
+4. FoodServiceOccupancyForecast.Core → не зависит от других проектов (ядро)
+```
