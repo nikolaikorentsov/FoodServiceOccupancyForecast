@@ -21,45 +21,47 @@
 ## 🏗 Архитектура проекта
 
 Проект построен на принципах **чистой архитектуры** (Clean Architecture) с разделением на слои:
+````markdown
+```tree
 FoodServiceOccupancyForecast/
-├── src/ # Исходный код
-│ ├── FoodServiceOccupancyForecast.Core/ # Ядро (бизнес-логика)
-│ │ ├── Entities/ # Сущности (Table, Booking, Visitor)
-│ │ ├── Interfaces/ # Абстракции (репозитории, сервисы)
-│ │ ├── Services/ # Бизнес-логика
-│ │ └── Enums/ # Перечисления
-│ │
-│ ├── FoodServiceOccupancyForecast.Infrastructure/ # Инфраструктура (доступ к данным)
-│ │ ├── Data/ # Контекст БД (ApplicationDbContext)
-│ │ ├── Repositories/ # Реализация репозиториев
-│ │ └── Migrations/ # Миграции Entity Framework
-│ │
-│ ├── FoodServiceOccupancyForecast.VideoAnalysis/ # Модуль видеоаналитики
-│ │ ├── AI/ # AI модели (распознавание людей)
-│ │ ├── Camera/ # Работа с IP-камерами (RTSP/ONVIF)
-│ │ └── Processing/ # Обработка видеопотока
-│ │
-│ └── FoodServiceOccupancyForecast.Web/ # Веб-приложение (UI + API)
-│ ├── Controllers/ # REST API для мобильного приложения
-│ │ └── Api/ # API эндпоинты
-│ ├── Pages/ # Razor Pages интерфейс
-│ │ ├── Admin/ # Панель менеджера
-│ │ ├── Client/ # Клиентская часть (бронирование)
-│ │ └── Shared/ # Общие компоненты
-│ ├── Hubs/ # SignalR для real-time обновлений
-│ ├── Services/ # Сервисы приложения
-│ └── wwwroot/ # Статические файлы (CSS, JS, изображения)
+├── src/                                    # Исходный код
+│   ├── FoodServiceOccupancyForecast.Core/          # Ядро (бизнес-логика)
+│   │   ├── Entities/                       # Сущности (Table, Booking, Visitor)
+│   │   ├── Interfaces/                     # Абстракции (репозитории, сервисы)
+│   │   ├── Services/                       # Бизнес-логика
+│   │   └── Enums/                          # Перечисления
+│   │
+│   ├── FoodServiceOccupancyForecast.Infrastructure/ # Инфраструктура (доступ к данным)
+│   │   ├── Data/                           # Контекст БД (ApplicationDbContext)
+│   │   ├── Repositories/                   # Реализация репозиториев
+│   │   └── Migrations/                     # Миграции Entity Framework
+│   │
+│   ├── FoodServiceOccupancyForecast.VideoAnalysis/ # Модуль видеоаналитики
+│   │   ├── AI/                             # AI модели (распознавание людей)
+│   │   ├── Camera/                         # Работа с IP-камерами (RTSP/ONVIF)
+│   │   └── Processing/                     # Обработка видеопотока
+│   │
+│   └── FoodServiceOccupancyForecast.Web/          # Веб-приложение (UI + API)
+│       ├── Controllers/                     # REST API для мобильного приложения
+│       │   └── Api/                         # API эндпоинты
+│       ├── Pages/                           # Razor Pages интерфейс
+│       │   ├── Admin/                       # Панель менеджера
+│       │   ├── Client/                      # Клиентская часть (бронирование)
+│       │   └── Shared/                      # Общие компоненты
+│       ├── Hubs/                            # SignalR для real-time обновлений
+│       ├── Services/                        # Сервисы приложения
+│       └── wwwroot/                         # Статические файлы (CSS, JS, изображения)
 │
-├── tests/ # Тесты
-│ ├── FoodServiceOccupancyForecast.UnitTests/ # Юнит-тесты
-│ └── FoodServiceOccupancyForecast.IntegrationTests/ # Интеграционные тесты
+├── tests/                                   # Тесты
+│   ├── FoodServiceOccupancyForecast.UnitTests/      # Юнит-тесты
+│   └── FoodServiceOccupancyForecast.IntegrationTests/ # Интеграционные тесты
 │
-├── docs/ # Документация
-│ ├── ТЗ.docx
-│ ├── анализ ПО.docx
-│ ├── Объяснение связей для проекта 2.0.docx
-│ └── функциональные и нефункциональные требования.docx
+├── docs/                                    # Документация
+│   ├── ТЗ.docx
+│   ├── анализ ПО.docx
+│   ├── Объяснение связей для проекта 2.0.docx
+│   └── функциональные и нефункциональные требования.docx
 │
-├── FoodServiceOccupancyForecast.sln # Файл решения
-├── .gitignore # Исключения Git
-└── README.md # Описание проекта
+├── FoodServiceOccupancyForecast.sln         # Файл решения
+├── .gitignore                               # Исключения Git
+└── README.md                                # Описание проекта
