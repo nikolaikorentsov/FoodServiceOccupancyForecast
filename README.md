@@ -21,7 +21,6 @@
 ## 🏗 Архитектура проекта
 
 Проект построен на принципах **чистой архитектуры** (Clean Architecture) с разделением на слои:
-````markdown
 ```tree
 FoodServiceOccupancyForecast/
 ├── src/                                    # Исходный код
