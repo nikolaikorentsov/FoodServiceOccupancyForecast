@@ -102,7 +102,7 @@ FoodServiceOccupancyForecast/
 ### Требования
 - Visual Studio 2022 (или более новая)
 - .NET 8 SDK
-- SQL Server (LocalDB / Express / Developer)
+- Postgre SQL
 
 ### Шаги для запуска
 
