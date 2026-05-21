@@ -1,1 +1,112 @@
 # FoodServiceOccupancyForecast
+
+**Система прогнозирования загруженности заведений общественного питания на основе AI-видеоаналитики**
+
+---
+
+## 📌 О проекте
+
+Данная система предназначена для автоматизированного анализа и прогнозирования загруженности кафе, ресторанов и других заведений общественного питания. 
+
+**Основные возможности:**
+- 📹 **AI-видеоаналитика** — подсчет посетителей, анализ очередей, определение занятости столов
+- 📊 **Прогнозирование загрузки** — пиковые часы, динамика по дням недели и сезонам
+- 👥 **Оптимизация персонала** — планирование графиков работы на основе прогнозов
+- 📱 **Клиентское бронирование** — онлайн-бронирование столов с отображением свободных мест
+- 🏢 **Интерактивная карта зала** — визуализация занятости в реальном времени
+- 📦 **Управление закупками** — расчет необходимого объема продуктов на основе прогнозов
+
+---
+
+## 🏗 Архитектура проекта
+
+Проект построен на принципах **чистой архитектуры** (Clean Architecture) с разделением на слои:
+```tree
+FoodServiceOccupancyForecast/
+├── src/                                    # Исходный код
+│   ├── FoodServiceOccupancyForecast.Core/          # Ядро (бизнес-логика)
+│   │   ├── Entities/                       # Сущности (Table, Booking, Visitor)
+│   │   ├── Interfaces/                     # Абстракции (репозитории, сервисы)
+│   │   ├── Services/                       # Бизнес-логика
+│   │   └── Enums/                          # Перечисления
+│   │
+│   ├── FoodServiceOccupancyForecast.Infrastructure/ # Инфраструктура (доступ к данным)
+│   │   ├── Data/                           # Контекст БД (ApplicationDbContext)
+│   │   ├── Repositories/                   # Реализация репозиториев
+│   │   └── Migrations/                     # Миграции Entity Framework
+│   │
+│   ├── FoodServiceOccupancyForecast.VideoAnalysis/ # Модуль видеоаналитики
+│   │   ├── AI/                             # AI модели (распознавание людей)
+│   │   ├── Camera/                         # Работа с IP-камерами (RTSP/ONVIF)
+│   │   └── Processing/                     # Обработка видеопотока
+│   │
+│   └── FoodServiceOccupancyForecast.Web/          # Веб-приложение (UI + API)
+│       ├── Controllers/                     # REST API для мобильного приложения
+│       │   └── Api/                         # API эндпоинты
+│       ├── Pages/                           # Razor Pages интерфейс
+│       │   ├── Admin/                       # Панель менеджера
+│       │   ├── Client/                      # Клиентская часть (бронирование)
+│       │   └── Shared/                      # Общие компоненты
+│       ├── Hubs/                            # SignalR для real-time обновлений
+│       ├── Services/                        # Сервисы приложения
+│       └── wwwroot/                         # Статические файлы (CSS, JS, изображения)
+│
+├── tests/                                   # Тесты
+│   ├── FoodServiceOccupancyForecast.UnitTests/      # Юнит-тесты
+│   └── FoodServiceOccupancyForecast.IntegrationTests/ # Интеграционные тесты
+│
+├── docs/                                    # Документация
+│   ├── ТЗ.docx
+│   ├── анализ ПО.docx
+│   ├── Объяснение связей для проекта 2.0.docx
+│   └── функциональные и нефункциональные требования.docx
+│
+├── FoodServiceOccupancyForecast.sln         # Файл решения
+├── .gitignore                               # Исключения Git
+└── README.md                                # Описание проекта
+```
+### 🔗 Зависимости между проектами
+```
+1. FoodServiceOccupancyForecast.Web → зависит от:
+   ├── FoodServiceOccupancyForecast.Core
+   ├── FoodServiceOccupancyForecast.Infrastructure
+   └── FoodServiceOccupancyForecast.VideoAnalysis
+
+2. FoodServiceOccupancyForecast.Infrastructure → зависит от:
+   └── FoodServiceOccupancyForecast.Core
+
+3. FoodServiceOccupancyForecast.VideoAnalysis → зависит от:
+   └── FoodServiceOccupancyForecast.Core
+
+4. FoodServiceOccupancyForecast.Core → не зависит от других проектов (ядро)
+```
+## 📋 Функциональные требования (кратко)
+
+### Для менеджеров заведения
+- 📈 Оценка пиковых часов (день/неделя/месяц)
+- 🗺 Интерактивная карта зала с занятостью столов
+- 🔔 Оповещения о превышении порога загрузки
+- 👥 Управление персоналом и графиками
+- ✅ Подтверждение/отклонение броней
+
+### Для посетителей
+- 🏠 Карта заведений с отображением текущей занятости
+- 📅 Онлайн-бронирование столов (дата, время, количество персон)
+- 📍 Интерактивная карта выбора стола
+- ℹ️ Информация о заведении (часы работы, адрес)
+
+---
+
+## 🚀 Запуск проекта
+
+### Требования
+- Visual Studio 2022 (или более новая)
+- .NET 8 SDK
+- SQL Server (LocalDB / Express / Developer)
+
+### Шаги для запуска
+
+1. **Клонировать репозиторий**
+   ```bash
+   git clone https://github.com/nikolaikorentsov/FoodServiceOccupancyForecast.git
+   cd FoodServiceOccupancyForecast
