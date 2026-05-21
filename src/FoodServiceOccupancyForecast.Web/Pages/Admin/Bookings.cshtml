@@ -1,0 +1,98 @@
+﻿@page
+@model FoodServiceOccupancyForecast.Web.Pages.Admin.BookingsModel
+@{
+    ViewData["Title"] = "Заказы на бронирование";
+}
+
+<section class="bookings-container">
+    <div class="bookings-list-column">
+        <div class="staff-card">
+            <h2>Заказы на бронирование</h2>
+            <p class="staff-subtitle">Управление резервами столов и новыми заявками</p>
+
+            <div class="bookings-feed">
+
+                <div class="booking-card-item status-waiting">
+                    <div class="booking-meta">
+                        
+                        <span class="booking-index">1.</span>
+                        <span class="booking-table-badge">Стол № X</span>
+                        <span class="booking-time-badge">C 13:30</span>
+                    </div>
+                    <div class="booking-details">
+                       
+                        <p class="booking-main-text">Ожидает подтверждения брони администратором</p>
+                        <span class="booking-sub-text">Заявка поступила только что через приложение</span>
+                    </div> 
+                    <div class="booking-status-tag tag-orange">Ожидание</div>
+                </div>
+
+                <div class="booking-card-item status-confirmed">
+                   
+                    <div class="booking-meta">
+                        <span class="booking-index">2.</span>
+                        <span class="booking-table-badge">Стол № Z</span>
+                        <span class="booking-time-badge">На 17:00</span>
+                    </div>
+                    <div class="booking-details">
+                        
+                        <p class="booking-main-text">Стол успешно забронирован на вечер</p>
+                        <span class="booking-sub-text">Заказ оформлен системой от 9:40 утра</span>
+                    </div>
+                    <div class="booking-status-tag tag-purple">Утвержден</div>
+                </div>
+
+                <div class="booking-card-item status-empty">
+                    
+                    <span class="booking-index">3.</span>
+                    <span class="empty-placeholder">— Свободная ячейка резерва —</span>
+                </div> 
+
+                <div class="booking-card-item status-empty">
+                    <span class="booking-index">4.</span>
+                    <span class="empty-placeholder">— Свободная ячейка резерва —</span> 
+                </div>
+
+                <div class="booking-card-item status-empty">
+                    <span class="booking-index">5.</span>
+                    <span class="empty-placeholder">— Свободная ячейка резерва —</span>
+                </div>
+
+                <div class="booking-card-item status-empty">
+                    
+                    <span class="booking-index">6.</span>
+                    <span class="empty-placeholder">— Свободная ячейка резерва —</span>
+                </div> 
+
+                <div class="booking-card-item status-empty">
+                    <span class="booking-index">7.</span>
+                    <span class="empty-placeholder">— Свободная ячейка резерва —</span> 
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bookings-action-column">
+       
+        <div class="staff-card action-panel">
+            <h3>Обработка заявки</h3>
+            <p class="action-desc">
+                Выделен <strong>Стол № X</strong>. Подтвердите резерв, чтобы зафиксировать позицию на интерактивной карте зала.
+            </p>
+
+            <div class="action-summary">
+                <div class="badge-row"><span>Планируемое время:</span> <strong>13:30</strong></div>
+                <div class="badge-row"><span>Длительность:</span> <strong>2.5 часа</strong></div>
+            </div> 
+
+            <div class="booking-control-buttons">
+                <button class="action-btn accept-btn">Подтвердить бронь</button>
+                <button class="action-btn decline-btn">Отклонить</button>
+            </div> 
+            <span class="action-tip">
+                После подтверждения цвет стола на карте автоматически изменится на фиолетовый.
+            </span>
+        </div>
+    </div>
+</section>

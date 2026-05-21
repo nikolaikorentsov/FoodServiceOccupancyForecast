@@ -1,0 +1,67 @@
+﻿@page
+@model FoodServiceOccupancyForecast.Web.Pages.Admin.AnalyticsModel
+@{
+    ViewData["Title"] = "Аналитика и прогнозы";
+}
+
+<section class="analytics-container">
+
+    <div class="analytics-main-column">
+        <div class="staff-card">
+            <h2>Дашборд пиковых нагрузок</h2>
+            <p class="staff-subtitle">Интеллектуальный мониторинг посещаемости заведения</p>
+
+            <div class="analytics-chart-placeholder">
+                <span class="chart-tip">Место для интерактивного графика нагрузок по часам</span>
+            </div>
+        </div>
+
+        <div class="staff-card ai-block">
+            <h3>🤖 Сравнение «План vs Факт»</h3> 
+            <p class="action-desc">
+                Наложение реальной посещаемости на прогнозную для непрерывного обучения встроенной модели AI.
+            </p>
+
+            <div class="analytics-chart-placeholder secondary-chart">
+                <span class="chart-tip">График наложения: Синяя линия — План (AI), Красная — Факт</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="analytics-right-column">
+        <div class="staff-card">
+            <h3> Анализ по дням недели</h3>
+            <div class="staff-grid">
+
+                <div class="badge-row"><span>Пятница (пик):</span> <strong>94%</strong></div>
+                <div class="badge-row"><span>Суббота:</span> <strong>89%</strong></div>
+                <div class="badge-row">
+
+                    <span>Понедельник (спад):</span> <strong style="color: #ffeb3b;">32%</strong>
+                </div>
+            </div>
+        </div> 
+
+        <div class="staff-card">
+            <h3> Прогноз закупок (AI)</h3>
+            <p class="action-desc" style="margin-bottom: 12px;">
+           
+                Автоматический расчет необходимых продуктов на основе прогноза гостей на следующие 3 дня.
+            </p>
+            <div class="status-indicator">● Корректировка меню выполнена (+15% мясо)</div>
+        </div>
+
+        <div class="staff-card export-block">
+            <h3> Экспорт отчетов</h3>
+            <p class="action-desc" style="font-size: 12px; margin-bottom: 15px;">
+                
+                Выгрузка полных аналитических данных в удобном формате.
+            </p>
+            <div class="export-buttons">
+                <button class="action-btn export-btn">Скачать PDF</button>
+                <button class="action-btn export-btn excel-btn">Excel</button>
+            </div> 
+        </div>
+    </div>
+
+</section>

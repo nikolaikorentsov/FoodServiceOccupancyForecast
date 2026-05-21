@@ -1,0 +1,68 @@
+﻿@page
+@model FoodServiceOccupancyForecast.Web.Pages.Admin.StaffModel
+@{
+    ViewData["Title"] = "Управление персоналом";
+}
+
+<section class="staff-container">
+    <div class="staff-left-column">
+        <div class="staff-card staff-main">
+            <h2>Управление персоналом</h2>
+            <p class="staff-subtitle">Мониторинг смены ресторана «Тулиновъ»</p>
+
+            <div class="staff-grid">
+                <div class="staff-sub-block">
+                    <h3>График персонала</h3>
+                    <div class="badge-row"><span>В смене:</span> <strong>8 чел.</strong></div>
+                    <div class="badge-row">
+                        <span>На перерыве:</span> <strong style="color: #ffeb3b;">2 чел.</strong>
+                    </div>
+                </div>
+
+                <div class="staff-sub-block">
+                    <h3>Статус на месте</h3>
+                    <div class="status-indicator">● Все зоны укомплектованы</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="staff-card staff-actions">
+            <h3>Экстренные действия</h3>
+            <p class="action-desc">При пиковой нагрузке зала вы можете вызвать дополнительных сотрудников одной кнопкой.</p>
+            <button class="action-btn">Вызвать доп. персонал</button>
+            <span class="action-tip">Будет отправлено push-уведомление всем свободным сотрудникам о выходе на подработку.</span>
+        </div>
+    </div>
+
+    <div class="staff-card staff-list-block">
+        <h3> Сотрудники в смене</h3>
+        <table class="staff-table">
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Роль</th>
+                    <th>Зона / Столы</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Александр В.</td>
+                    <td>Старший официант</td>
+                    <td>Зал №1 (Столы 1, 5, 9)</td>
+                    <td><span class="user-badge badge-active">Обслуживает</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="staff-card staff-logs-block">
+        <h3> Активность за смену</h3>
+        <div class="logs-list">
+            <div class="log-item">
+                <span class="log-time">14:02</span>
+                <span class="log-text"><strong>Дмитрий Л.</strong> ушел на перерыв (20 мин)</span>
+            </div>
+        </div>
+    </div>
+</section>

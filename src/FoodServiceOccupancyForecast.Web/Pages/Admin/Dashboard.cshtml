@@ -1,0 +1,210 @@
+﻿@page
+@model FoodServiceOccupancyForecast.Web.Pages.Admin.DashboardModel
+@{
+    ViewData["Title"] = "Мониторинг столов — Зал №1";
+}
+
+<main class="hall-1-container">
+
+    <div class="decor-item object-kamin">Камин</div>
+    <div class="decor-item object-royal">Рояль</div>
+
+    <div class="table-group pos-table-1" tabindex="0">
+        
+        <div class="table-chair ch-left-1"></div>
+        <div class="table-chair ch-left-2"></div>
+        <div class="table-chair ch-right-1"></div>
+        <div class="table-chair ch-right-2"></div> 
+        <div class="table-body shape-rect-v type-booked">
+            <span class="table-number">1</span>
+        </div>
+
+        <div class="table-desc-window">
+           
+            <div>Стол № <span class="txt-pink data-num">1</span></div>
+            <div>Статус: <span class="txt-purple data-status">Забронирован</span></div>
+            <div>Количество гостей: <span class="txt-pink data-guests">0</span></div> 
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">0</span></div>
+        </div>
+    </div>
+
+    <div class="table-group pos-table-5" tabindex="0">
+       
+        <div class="table-chair ch-top-left"></div>
+        <div class="table-chair ch-top-right"></div>
+        <div class="table-chair ch-bottom-left"></div>
+        <div class="table-chair ch-bottom-right"></div>
+        <div class="table-body shape-rhombus type-free">
+          
+            <span class="table-number">5</span>
+        </div>
+
+        <div class="table-desc-window">
+            
+            <div>Стол № <span class="txt-pink data-num">5</span></div>
+            <div>Статус: <span class="txt-green data-status">Свободен</span></div>
+            <div>Количество гостей: <span class="txt-pink data-guests">0</span></div>
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">0</span></div> 
+        </div>
+    </div>
+
+    <div class="table-group pos-table-9" tabindex="0">
+        <div class="table-chair ch-top-left"></div> 
+        <div class="table-chair ch-top-right"></div>
+        <div class="table-chair ch-bottom-left"></div>
+        <div class="table-chair ch-bottom-right"></div>
+        <div class="table-body shape-rhombus type-busy">
+           
+            <span class="table-number">9</span>
+        </div>
+
+        <div class="table-desc-window">
+            <div>Стол № <span class="txt-pink data-num">9</span></div> 
+            <div>Статус: <span class="txt-red data-status">Занят</span></div>
+            <div>Количество гостей: <span class="txt-pink data-guests">Y</span></div>
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">Z</span></div> 
+            <div>Время: <span class="data-time">0 ч 0 м</span></div>
+        </div>
+    </div>
+
+    <div class="table-group pos-table-2" tabindex="2">
+        
+        <div class="table-chair ch-top-left"></div>
+        <div class="table-chair ch-top-right"></div>
+        <div class="table-chair ch-bottom-left"></div>
+        <div class="table-chair ch-bottom-right"></div>
+        <div class="table-body shape-rhombus type-free">
+            <span class="table-number">2</span>
+        </div>
+        <div class="table-desc-window">
+            <div>Стол № <span class="txt-pink data-num">2</span></div> 
+            <div>Статус: <span class="txt-green data-status">Свободен</span></div>
+            <div>Количество гостей: <span class="txt-pink data-guests">0</span></div>
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">0</span></div> 
+        </div>
+    </div>
+
+    <div class="table-group pos-table-4" tabindex="4">
+        <div class="table-chair ch-top-1"></div>
+        <div class="table-chair ch-top-2"></div>
+        <div class="table-chair ch-bottom-1"></div>
+        <div class="table-chair ch-bottom-2"></div>
+        <div class="table-body shape-rect-h type-free">
+            <span class="table-number">4</span>
+        </div>
+        <div class="table-desc-window">
+            <div>Стол № <span class="txt-pink data-num">4</span></div>
+            <div>Статус: <span class="txt-green data-status">Свободен</span></div> 
+            <div>Количество гостей: <span class="txt-pink data-guests">0</span></div>
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">0</span></div>
+        </div>
+    </div> 
+
+    <div class="table-group pos-table-6" tabindex="6">
+        <div class="table-chair ch-left-1"></div>
+        <div class="table-chair ch-left-2"></div>
+        <div class="table-chair ch-right-1"></div> 
+        <div class="table-chair ch-right-2"></div>
+        <div class="table-body shape-rect-v type-busy">
+            <span class="table-number">6</span>
+        </div>
+        <div class="table-desc-window">
+          
+            <div>Стол № <span class="txt-pink data-num">6</span></div>
+            <div>Статус: <span class="txt-red data-status">Занят</span></div>
+            <div>Количество гостей: <span class="txt-pink data-guests">Y</span></div> 
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">Z</span></div>
+            <div>Время: <span class="data-time">0 ч 0 м</span></div>
+        </div>
+    </div>
+
+    
+    <div class="table-group pos-table-7" tabindex="7">
+        <div class="table-chair ch-left-1"></div>
+        <div class="table-chair ch-left-2"></div>
+        <div class="table-chair ch-right-1"></div> 
+        <div class="table-chair ch-right-2"></div>
+        <div class="table-body shape-rect-v type-free">
+            <span class="table-number">7</span>
+        </div>
+        <div class="table-desc-window">
+            
+            <div>Стол № <span class="txt-pink data-num">7</span></div>
+            <div>Статус: <span class="txt-green data-status">Свободен</span></div>
+            <div>Количество гостей: <span class="txt-pink data-guests">0</span></div>
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">0</span></div> 
+        </div>
+    </div>
+
+    <div class="table-group pos-table-10" tabindex="10">
+       
+        <div class="table-chair ch-top-1"></div>
+        <div class="table-chair ch-top-2"></div>
+        <div class="table-chair ch-bottom-1"></div>
+        <div class="table-chair ch-bottom-2"></div>
+        <div class="table-body shape-rect-h type-free">
+    
+            <span class="table-number">10</span>
+        </div>
+        <div class="table-desc-window">
+            <div>Стол № <span class="txt-pink data-num">10</span></div> 
+            <div>Статус: <span class="txt-green data-status">Свободен</span></div>
+            <div>Количество гостей: <span class="txt-pink data-guests">0</span></div>
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">0</span></div>
+        </div>
+    </div>
+
+    <div class="table-group pos-table-3" tabindex="3">
+        <div class="table-chair ch-left-1"></div>
+        <div class="table-chair ch-left-2"></div>
+        <div class="table-chair ch-right-1"></div>
+        <div class="table-chair ch-right-2"></div>
+        <div class="table-body shape-rect-v type-free">
+            <span class="table-number">3</span> 
+        </div>
+        <div class="table-desc-window">
+            <div>Стол № <span class="txt-pink data-num">3</span></div>
+            <div>Статус: <span class="txt-green data-status">Свободен</span></div>
+            <div>Количество гостей: <span class="txt-pink data-guests">0</span></div> 
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">0</span></div>
+        </div>
+    </div>
+
+    
+    <div class="table-group pos-table-8" tabindex="8">
+        <div class="sofa sofa-top"></div>
+        <div class="sofa sofa-bottom"></div>
+        <div class="table-body shape-rect-h type-booked">
+            <span class="table-number">8</span> 
+        </div>
+        <div class="table-desc-window">
+            <div>Стол № <span class="txt-pink data-num">8</span></div>
+            <div>Статус: <span class="txt-purple data-status">Забронирован</span></div> 
+            <div>Количество гостей: <span class="txt-pink data-guests">0</span></div>
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">0</span></div>
+        </div>
+    </div> 
+
+    <div class="table-group pos-table-11" tabindex="11">
+        <div class="sofa sofa-top"></div>
+        <div class="sofa sofa-bottom"></div>
+        <div class="table-body shape-rect-h type-busy">
+           
+            <span class="table-number">11</span>
+        </div>
+        <div class="table-desc-window">
+            <div>Стол № <span class="txt-pink data-num">11</span></div> 
+            <div>Статус: <span class="txt-red data-status">Занят</span></div>
+            <div>Количество гостей: <span class="txt-pink data-guests">Y</span></div>
+            <div>Обслуживает официант № <span class="txt-yellow data-waiter">Z</span></div>
+            <div>Время: <span class="data-time">0 ч 0 м</span></div> 
+        </div>
+    </div>
+
+    <div class="map-legend">
+        <div class="legend-item"><span class="dot legend-booked"></span>Стол забронирован</div>
+        <div class="legend-item"><span class="dot legend-busy"></span>Стол занят</div>
+        <div class="legend-item"><span class="dot legend-free"></span>Стол свободен</div>
+    </div>
+
+</main>

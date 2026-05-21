@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] — Ресторан</title>
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true">
+</head>
+<body>
+
+    <div class="restaurant-map-second">
+
+        <header class="header">
+            <div class="logo">
+                <img src="~/images/LOGO 1.svg" alt="Логотип">
+            </div>
+
+            <div class="prompt">
+                <div class="prompt-item">
+                    <img src="~/images/иконка столика 1.svg" alt="Столы">
+                    Занято
+                    <span id="count-busy" class="val-busy">0</span>
+                    из <span id="count-total" class="val-total">29</span> столов
+                </div>
+
+                <div class="prompt-item">
+                    <img src="~/images/иконка человека 1.svg" alt="Гости">
+                    Количество гостей: <span id="count-guests" class="val-guests">0</span>
+                </div>
+
+                <div class="prompt-item">
+                    <img src="~/images/иконка календарика 1.svg" alt="Календарь">
+                    Забронировано <span id="count-booked" class="val-booked">0</span> столов
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+
+            <aside class="left-menu-container" style="position: relative; z-index: 999;">
+                <nav class="menu-nav">
+                    <a href="/Admin/Map" class="menu-link">Общая карта</a>
+                    <a href="/Admin/Dashboard" class="menu-link">Зал №1</a>
+                    <a href="/Admin/CircleHall" class="menu-link">Зал №2</a>
+                    <a href="/Admin/Hall3" class="menu-link">Зал №3 (2 этаж)</a>
+
+                    <div class="menu-divider"></div>
+
+                    <a href="/Admin/Staff" class="menu-link">Персонал</a>
+                    <a href="/Admin/Analytics" class="menu-link">Аналитика</a>
+                    <a href="/Admin/Bookings" class="menu-link">Бронирования</a>
+                    <a href="/Admin/About" class="menu-link">Информация о заведении</a>
+                </nav>
+                <div class="load-info">Текущая нагрузка: X %</div>
+            </aside>
+
+            @RenderBody()
+
+        </div>
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

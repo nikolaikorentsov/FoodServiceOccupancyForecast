@@ -1,0 +1,51 @@
+﻿@page
+@model FoodServiceOccupancyForecast.Web.Pages.Admin.AboutModel
+@{
+    ViewData["Title"] = "Информация о заведении";
+}
+
+<section class="about-container">
+
+    <div class="staff-card about-main-card">
+        <h2>ℹ Информация о заведении</h2>
+        <p class="staff-subtitle">История и структура ресторанного комплекса</p>
+
+        <div class="about-text-content">
+            <p>В сентябре 2019 в самом центре, открылся комплекс <strong>Тулиновъ Дом</strong>.</p>
+            <p>Помещение поделено на 3 зала: камерный каминный зал, просторный зал на 2 этаже, основной зал ресторана с большой стеной из живых растений и круглый зал кафе, потолок которого венчает стеклянный купол.</p>
+            <p>Меню представлено блюдами русской и европейской кухни.</p>
+        </div>
+    </div>
+
+    <div class="staff-card about-contacts-card">
+        <h3>📞 Контактные данные</h3>
+        <div class="contacts-list">
+
+            <div class="contact-item-row">
+                <span class="contact-icon">📍</span>
+                <div class="contact-info-block">
+                    <span class="contact-label">Адрес заведения</span>
+                    <strong class="contact-value">ул. Советская д. 1</strong>
+                </div>
+            </div>
+
+            <a href="tel:88005553535" class="contact-item-row contact-link">
+                <span class="contact-icon">📞</span>
+                <div class="contact-info-block">
+                    <span class="contact-label">Телефон горячей линии</span>
+                    <strong class="contact-value">8-(800)-555-35-35</strong>
+                </div>
+            </a>
+
+            <a href="mailto:bubu@gmail.com" class="contact-item-row contact-link">
+                <span class="contact-icon">✉️</span>
+                <div class="contact-info-block">
+                    <span class="contact-label">Электронная почта</span>
+                    <strong class="contact-value">bubu@gmail.com</strong>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+</section>
